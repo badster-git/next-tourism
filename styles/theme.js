@@ -1,4 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles";
+import { Dialog } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
@@ -18,10 +19,21 @@ export const coreTheme = createMuiTheme({
       xs: 0,
       sm: 640,
       sd: 960,
+      sl: 991,
       ml: 1024,
       md: 1200,
       lg: 1280,
       xl: 1920,
+    },
+  },
+  overrides: {
+    MuiDialog: {
+      root: {
+        "& $container": {
+          "& $paper": {
+          },
+        },
+      },
     },
   },
   palette: {
@@ -52,7 +64,7 @@ export const coreTheme = createMuiTheme({
       '"Segoe UI"',
       "Roboto",
       '"Helvetica Neue"',
-      "sans-serif"
+      "sans-serif",
     ].join(","),
     h1: {
       color: mainBlack,
