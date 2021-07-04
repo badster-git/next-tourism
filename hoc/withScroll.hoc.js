@@ -1,6 +1,6 @@
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import { Slide, AppBar, Toolbar } from "@material-ui/core";
-import React from "react";
+import React, { forwardRef } from "react";
 import { HOMEPAGE_LINKS } from "../data/HOMEPAGE_LINKS";
 
 const HideOnScroll = (props) => {
@@ -14,22 +14,31 @@ const HideOnScroll = (props) => {
   );
 };
 
-function withScroll(Component) {
-  const links = HOMEPAGE_LINKS;
-  return function wrappedWithScroll(props) {
-    return (
-      <HideOnScroll>
-        <AppBar
-          position="static"
-          style={{ background: "white", boxShadow: "none", padding: "25px" }}
-        >
-          <Toolbar disableGutters style={{ display: "flex", padding: "15px" }}>
-            <Component {...props} links={links} />
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
-    );
-  };
+export default function withScroll(Component) {
+  class WithScroll extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+      const { forwardedRef, ...rest } = this.props;
+      const links = HOMEPAGE_LINKS;
+      return (
+        <HideOnScroll>
+          <AppBar style={{ boxShadow: "none", padding: "25px" }}>
+            <Toolbar
+              disableGutters
+              style={{ display: "flex", padding: "15px" }}
+            >
+              <Component ref={forwardedRef} links={links} {...rest} />
+            </Toolbar>
+          </AppBar>
+        </HideOnScroll>
+      );
+    }
+  }
+  // eslint-disable-next-line react/display-name
+  return forwardRef((props, ref) => {
+    return <WithScroll {...props} forwardedRef={ref} />;
+  });
 }
 
-export default withScroll;

@@ -1,5 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import { Dialog } from "@material-ui/core";
+import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
@@ -9,8 +8,9 @@ const mainWhite = "#fff";
 const mainBlue = "#006aff";
 const mainBlack = "#000";
 const mainGray = "#f2f2f2";
-const lightBlue = "#f2faff";
 const lightBrown = "#d6ad60";
+const lightBlue = "#5d87d6";
+const darkBlue = "#2b57ab";
 
 // Create a theme instance.
 export const coreTheme = createMuiTheme({
@@ -30,9 +30,22 @@ export const coreTheme = createMuiTheme({
     MuiDialog: {
       root: {
         "& $container": {
-          "& $paper": {
+          "& $paperScrollPaper": {
+            height: "60%",
+            maxHeight: "100%",
+            justifyContent: "center",
           },
         },
+      },
+    },
+    MuiTableCell: {
+      root: {
+        borderBottom: "none",
+      },
+    },
+    MuiTableContainer: {
+      root: {
+        boxShadow: "none",
       },
     },
   },
@@ -43,6 +56,7 @@ export const coreTheme = createMuiTheme({
       black: mainBlack,
       gray: mainGray,
       lightBrown: lightBrown,
+      lightBlue: lightBlue,
     },
     primary: {
       main: mainWhite,
@@ -74,6 +88,7 @@ export const coreTheme = createMuiTheme({
     },
     h3: {
       color: mainBlack,
+      fontFamily: '"STIX Two Math',
     },
     h4: {
       color: mainBlack,
@@ -81,22 +96,23 @@ export const coreTheme = createMuiTheme({
     h5: {
       color: mainBlack,
     },
+    subtitle1: {
+      fontFamily: '"STIX Two Math',
+    },
     button: {
-      backgroundColor: mainWhite,
+      backgroundColor: lightBlue,
 
       "&.MuiButton-outlinedPrimary": {
         color: `${mainBlue} !important`,
       },
       "&.MuiButton-text": {
-        color: mainBlack,
+        color: mainWhite,
       },
       "&.MuiButton-root:hover": {
-        backgroundColor: lightBlue,
+        backgroundColor: darkBlue,
         border: "1px solid rgb(209, 209, 213)",
-      },
-      "&.MuiButton-label": {
-        color: mainBlue,
       },
     },
   },
 });
+

@@ -1,26 +1,18 @@
-import React, { useState } from "react";
-import { Typography, AppBar, Toolbar, Container, Box } from "@material-ui/core";
+import React from "react";
+import { Typography, Container, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import SearchIcon from "@material-ui/icons/Search";
 import withScroll from "../../../hoc/withScroll.hoc.js";
 import logo from "../../../public/logo/logo.png";
 
 const useStyles = makeStyles((theme) => ({
-  appBar: {
-    background: theme.palette.common.white,
-    boxShadow: "none",
-    padding: "25px",
-    [theme.breakpoints.up("ml")]: {
-      background: theme.palette.common.primary,
-    },
-  },
   headerInner: {
     position: "fixed",
     left: "0",
     width: "100%",
+    background: theme.palette.common.white,
   },
   container: {
     display: "flex",
@@ -65,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = ({ children, ...rest }) => {
   const { links } = rest;
-  console.log(rest);
   const classes = useStyles();
   const router = useRouter();
 
@@ -90,9 +81,7 @@ const Header = ({ children, ...rest }) => {
               justifyContent: "center",
             }}
           >
-            <Link href="/" passHref>
-              <Image src={logo} alt="Logo of site" width={310} height={88} />
-            </Link>
+            <Image src={logo} alt="Logo of site" width={310} height={88} />
           </Box>
         </Box>
         <Box
@@ -123,24 +112,22 @@ const Header = ({ children, ...rest }) => {
                     }}
                     key={link.id}
                   >
-                    <Link href={link.href} passHref>
-                      <Typography
-                        className={`${classes.headerLink} ${
-                          router.pathname === link.href
-                            ? "active"
-                            : "hover-underline"
-                        }`}
-                        style={{ fontWeight: "600" }}
-                        variant="body1"
-                      >
-                        {link.title}
-                        {router.pathname === link.href ? (
-                          <Box className={classes.borderBottom}></Box>
-                        ) : (
-                          ""
-                        )}
-                      </Typography>
-                    </Link>
+                    <Typography
+                      className={`${classes.headerLink} ${
+                        router.pathname === link.href
+                          ? "active"
+                          : "hover-underline"
+                      }`}
+                      style={{ fontWeight: "600" }}
+                      variant="body1"
+                    >
+                      {link.title}
+                      {router.pathname === link.href ? (
+                        <span className={classes.borderBottom}></span>
+                      ) : (
+                        ""
+                      )}
+                    </Typography>
                   </li>
                 ))}
               </ul>

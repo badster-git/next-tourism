@@ -1,5 +1,6 @@
 import Header from "../Header/Header";
 import MobileHeader from "../MobileHeader/MobileHeader";
+import { Footer } from "../Footer/Footer";
 import Head from "next/head";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -15,6 +16,7 @@ export const Layout = ({ children, title }) => {
       </Head>
       {matchesSM ? <Header /> : <MobileHeader />}
       <main>{children}</main>
+      <Footer />
       <style jsx global>
         {`
           html,
