@@ -1,13 +1,14 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { CacheProvider } from '@emotion/react';
-import createCache from '@emotion/cache';
-import {coreTheme } from '../../styles/theme';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Head from "next/head";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import coreTheme from "../../styles/theme";
+import "../../styles/styles.css"
 
-const cache = createCache({ key: 'css' });
+const cache = createCache({ key: "css" });
 cache.compat = true;
 
 export default function MyApp(props) {

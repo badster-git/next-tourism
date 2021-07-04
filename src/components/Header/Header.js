@@ -9,7 +9,6 @@ import logo from "../../../public/logo/logo.png";
 
 const useStyles = makeStyles((theme) => ({
   headerInner: {
-    position: "fixed",
     left: "0",
     width: "100%",
     background: theme.palette.common.white,

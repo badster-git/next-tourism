@@ -40,7 +40,7 @@ const MobileHeader = ({ children, ...rest }) => {
         style={{
           display: "flex",
           padding: "0 15px",
-          flexWrap: matchesSM ? "wrap" : "none",
+          flexWrap: matchesSM ? "wrap" : "nowrap",
           justifyContent: matchesSM ? "center" : "",
         }}
       >
@@ -56,7 +56,6 @@ const MobileHeader = ({ children, ...rest }) => {
             style={{
               alignItems: "center",
               display: "flex",
-              cursor: "pointer",
             }}
             disableGutters
           >

@@ -12,7 +12,7 @@ import {
   Box,
   Typography,
 } from "@material-ui/core";
-import { useState, createRef, useRef } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import {
@@ -22,23 +22,10 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   rootBtn: {
-    borderRadius: "25px",
-    width: "100%",
-    padding: "10px 0",
-
     "&:hover": {
-      "& $icon": {
+      "& .arrowIcon": {
         transform: "rotate(180deg)",
       },
-    },
-  },
-  icon: {
-    position: "absolute",
-    right: "15px",
-    transitionDuration: "0.3s",
-    transitionProperty: "transform",
-    "&:hover": {
-      transform: "rotate(180deg)",
     },
   },
   popover: {
@@ -107,13 +94,26 @@ export const CustomButton = ({ children, title, ...rest }) => {
       <Button
         aria-owns={openedPopover ? "mouse-over-popover" : undefined}
         aria-haspopup="true"
-        className={classes.rootBtn}
         ref={popoverAnchor}
         onMouseEnter={popoverEnter}
         onMouseLeave={popoverLeave}
+        style={{
+          borderRadius: "25px",
+          width: "100%",
+          padding: "10px 0",
+        }}
+        className="customBtn"
       >
         {title ? title : children}
-        <ExpandMoreIcon className={classes.icon} />
+        <ExpandMoreIcon
+          className="arrowIcon"
+          style={{
+            position: "absolute",
+            right: "15px",
+            transitionDuration: "0.3s",
+            transitionProperty: "transform",
+          }}
+        />
       </Button>
       <Popover
         id="mouse-over-popover"
@@ -130,6 +130,7 @@ export const CustomButton = ({ children, title, ...rest }) => {
           horizontal: "left",
         }}
         PaperProps={{ onMouseEnter: popoverEnter, onMouseLeave: popoverLeave }}
+        disableScrollLock
       >
         <Box className={classes.cityList} style={{ display: "flex" }}>
           <TableContainer component={Paper}>

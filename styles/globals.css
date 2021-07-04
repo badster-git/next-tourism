@@ -14,15 +14,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-}
-
-.icon:hover {
-  cursor: pointer;
-  color: "#d6ad60";
-  transition: "background .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out";
-}

@@ -24,10 +24,10 @@ export default function withScroll(Component) {
       const links = HOMEPAGE_LINKS;
       return (
         <HideOnScroll>
-          <AppBar style={{ boxShadow: "none", padding: "25px" }}>
+          <AppBar style={{ boxShadow: "none", padding: "5px" }}>
             <Toolbar
               disableGutters
-              style={{ display: "flex", padding: "15px" }}
+              style={{ display: "flex", padding: "5px" }}
             >
               <Component ref={forwardedRef} links={links} {...rest} />
             </Toolbar>

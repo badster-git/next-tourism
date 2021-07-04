@@ -13,7 +13,7 @@ const lightBlue = "#5d87d6";
 const darkBlue = "#2b57ab";
 
 // Create a theme instance.
-export const coreTheme = createMuiTheme({
+let coreTheme = createMuiTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -46,6 +46,13 @@ export const coreTheme = createMuiTheme({
     MuiTableContainer: {
       root: {
         boxShadow: "none",
+      },
+    },
+    MuiPopover: {
+      root: {
+        "& $paper": {
+          overflowX: "show",
+        },
       },
     },
   },
@@ -116,3 +123,6 @@ export const coreTheme = createMuiTheme({
   },
 });
 
+coreTheme = responsiveFontSizes(coreTheme);
+
+export default coreTheme;

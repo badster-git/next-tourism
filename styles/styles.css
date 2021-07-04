@@ -1,0 +1,47 @@
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+.backgroundMain {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../public/backgrounds/index-top.jpg);
+}
+
+.backgroundImg {
+  padding: 0 12px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: "0 0 10px #202020";
+}
+
+@media only screen and (min-width: 1024px) {
+  .backgroundImg {
+    min-height: 84vh;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .backgroundImg {
+    padding: 35px 10px;
+  }
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: #d6ad60 !important;
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out !important;
+}
+
+.arrowIcon:hover {
+  transform: rotate(180deg);
+}
+
+.customBtn:hover .arrowIcon {
+  transform: rotate(180deg);
+}
