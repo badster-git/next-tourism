@@ -3,7 +3,7 @@ import { CustomButton } from "../CustomButton/CustomButton";
 
 export const IndexTop = ({ children, ...rest }) => {
   return (
-    <Container maxWidth="xl" style={{ marginTop: "120px" }} disableGutters>
+    <Container maxWidth="none" style={{ marginTop: "120px" }} disableGutters>
       <div className="backgroundMain">
         <div className="backgroundImg">
           <div

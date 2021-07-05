@@ -1,7 +1,6 @@
 import Header from "../Header/Header";
 import MobileHeader from "../MobileHeader/MobileHeader";
 import { Footer } from "../Footer/Footer";
-import { IndexTop } from "../IndexTop/IndexTop";
 import Head from "next/head";
 
 import useMediaQuery from "@material-ui/core/useMediaQuery";
