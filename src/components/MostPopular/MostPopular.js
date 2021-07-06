@@ -8,12 +8,11 @@ const useStyles = makeStyles((theme) => ({
   containerWrap: {
     padding: "80px 10px",
     margin: "0 auto",
-    maxWidth: "none",
+    borderBottom: "1px solid #ececec"
   },
   mostPopularContainer: {
-    width: "100%",
+    width: "88%",
     margin: "0 auto",
-    maxWidth: "none",
     padding: "0 15px",
     [theme.breakpoints.down(1200)]: {
       maxWidth: "1140px",
@@ -51,8 +50,8 @@ export const MostPopular = ({ children, ...rest }) => {
   const locations = MOST_POPULAR_LINKS;
   const classes = useStyles();
   return (
-    <Container disableGutters className={classes.containerWrap}>
-      <Container disableGutters className={classes.mostPopularContainer}>
+    <Container maxWidth={false} disableGutters className={classes.containerWrap}>
+      <Container maxWidth={false} disableGutters className={classes.mostPopularContainer}>
         <div className={classes.mostPopularTitle}>
           <LocationOnOutlinedIcon
             className={classes.locationIcon}

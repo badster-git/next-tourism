@@ -4,9 +4,10 @@ import { red } from "@material-ui/core/colors";
 const mainWhite = "#fff";
 const mainBlue = "#006aff";
 const mainBlack = "#000";
-const mainGray = "#f2f2f2";
+const mainGray = "#443d47";
 const lightBrown = "#d6ad60";
 const lightBlue = "#5d87d6";
+const lightGray = "rgb(176 176 176 / 87%)";
 const darkBlue = "#2b57ab";
 
 // Create a theme instance.
@@ -52,6 +53,20 @@ let coreTheme = createMuiTheme({
         },
       },
     },
+    MuiTab: {
+      root: {
+        "&$selected": {
+          color: lightBrown,
+        },
+      },
+    },
+    MuiTabs: {
+      root: {
+        "& $indicator": {
+          backgroundColor: lightBrown,
+        },
+      },
+    },
   },
   palette: {
     common: {
@@ -61,6 +76,7 @@ let coreTheme = createMuiTheme({
       gray: mainGray,
       lightBrown: lightBrown,
       lightBlue: lightBlue,
+      lightGray: lightGray,
     },
     primary: {
       main: mainWhite,

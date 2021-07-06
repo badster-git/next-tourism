@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px",
     minHeight: "380px",
     cursor: "pointer",
+    overflow: "hidden",
     "&:last-child": {
       marginRight: 0,
     },
@@ -32,13 +33,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   placeSecond: {
-    minHeight: "280px",
     flex: 1,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
     padding: "10px",
+    minHeight: "280px",
     cursor: "pointer",
     overflow: "hidden",
     "&:last-child": {
@@ -58,8 +59,10 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     top: 0,
     left: 0,
-    transform: "scale(1.001) rotate(-.001deg)",
     transition: "transform .94s cubic-bezier(.07,1.13,.68,.94)",
+    "&:hover": {
+      transform: "scale(1.08) rotate(-.3deg)",
+    },
   },
 }));
 
@@ -94,6 +97,7 @@ export const CustomImgGrid = ({ children, locations, ...rest }) => {
                     style={{
                       position: "absolute",
                       textShadow: "0 0 10px #202020",
+                      pointerEvents: "none",
                     }}
                   >
                     <Typography variant="h3" component="h1" color="primary">
@@ -133,6 +137,7 @@ export const CustomImgGrid = ({ children, locations, ...rest }) => {
                     style={{
                       position: "absolute",
                       textShadow: "0 0 10px #202020",
+                      pointerEvents: "none"
                     }}
                   >
                     <Typography variant="h3" component="h1" color="primary">

@@ -1,7 +1,13 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 img {
   vertical-align: middle;
   max-width: 100%;
   height: auto;
+}
+
+section {
+  padding: 80px 10px;
 }
 
 .backgroundMain {
@@ -31,6 +37,7 @@ img {
   }
 }
 
+/** Custom Button Specific */
 .icon:hover {
   cursor: pointer;
   color: #d6ad60 !important;
@@ -44,4 +51,9 @@ img {
 
 .customBtn:hover .arrowIcon {
   transform: rotate(180deg);
+}
+
+/** Image Carousel Specific */
+.image-gallery-icon:hover {
+  color: #d6ad60;
 }
