@@ -11,14 +11,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(1200)]: {
       maxWidth: "1140px",
     },
-    [theme.breakpoints.down(992)]: {
-      maxWidth: "960px",
-    },
-    [theme.breakpoints.down(768)]: {
-      maxWidth: "720px",
-    },
     [theme.breakpoints.down(576)]: {
-      maxWidth: "540px",
+      width: "100%",
+      padding: "0",
+    },
+  },
+  aboutInnerContainer: {
+    [theme.breakpoints.down(576)]: {
+      width: "100%",
+      padding: "0",
     },
   },
   footIcon: {
@@ -38,7 +39,7 @@ export const AboutIndex = () => {
   return (
     <section>
       <Container maxWidth={false} className={classes.aboutContainer}>
-        <Container style={{ textAlign: "center", marginBottom: "80px" }}>
+        <Container className={classes.aboutInnerContainer} style={{ textAlign: "center", marginBottom: "80px" }}>
           <Footsteps
             className={classes.footIcon}
             style={{ width: "60px", height: "60px" }}
@@ -67,7 +68,7 @@ export const AboutIndex = () => {
               lineHeight: 1.3,
               color: theme.palette.common.gray,
               letterSpacing: "0.04em",
-              fontWeight: 300
+              fontWeight: 300,
             }}
           >
             Wherever in the world you decide to walk with us, we&apos;ll be

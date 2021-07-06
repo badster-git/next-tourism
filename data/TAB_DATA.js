@@ -1,3 +1,4 @@
+
 export const TAB_DATA = [
   {
     id: 1,
@@ -49,7 +50,7 @@ export const TAB_DATA = [
   },
   {
     id: 4,
-    title: "Exception Guides",
+    title: "Exceptional Guides",
     description:
       "Our hand-picked, local guides and suppliers are central to everything we do at Walks. They’re the mentors and the storytellers - the captivating characters who bring cities to life.",
     images: [

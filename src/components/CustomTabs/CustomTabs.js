@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import SwipeableViews from "react-swipeable-views";
 import { AppBar, Tabs, Tab, Typography } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/styles";
-import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import { ImageCarousel } from "../ImageCarousel/ImageCarousel";
 import { TAB_DATA } from "../../../data/TAB_DATA";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+import EnhancedEncryptionIcon from '@material-ui/icons/EnhancedEncryption';
+import CardTravelIcon from '@material-ui/icons/CardTravel';
+import MapIcon from '@material-ui/icons/Map';
 
 const TabPanel = (props) => {
   const { children, tabValue, idx, ...other } = props;
@@ -151,6 +154,7 @@ export const CustomTabs = ({ children, ...rest }) => {
           value={tabValue}
           onChange={handleChange}
           variant="fullWidth"
+          scrollButtons="auto"
           aria-label="full width tabs example"
         >
           {tabs.map((tab, idx) => (
@@ -158,7 +162,17 @@ export const CustomTabs = ({ children, ...rest }) => {
               key={tab.id}
               className={classes.tab}
               label={tab.title}
-              icon={<PeopleAltIcon />}
+              icon={
+                idx === 0 ? (
+                  <PeopleAltIcon />
+                ) : idx === 1 ? (
+                  <EnhancedEncryptionIcon />
+                ) : idx === 2 ? (
+                  <CardTravelIcon />
+                ) : (
+                  <MapIcon />
+                )
+              }
               disableRipple
               {...a11yProps(`${idx}`)}
             />

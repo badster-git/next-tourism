@@ -17,14 +17,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(1200)]: {
       maxWidth: "1140px",
     },
-    [theme.breakpoints.down(992)]: {
-      maxWidth: "960px",
-    },
-    [theme.breakpoints.down(768)]: {
-      maxWidth: "720px",
-    },
     [theme.breakpoints.down(576)]: {
-      maxWidth: "540px",
+      width: "100%",
+      padding: "0",
     },
   },
   mostPopularTitle: {
