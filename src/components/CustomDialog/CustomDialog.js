@@ -75,9 +75,7 @@ export const CustomDialog = (props) => {
           >
             <Link href={link.href} passHref>
               <Typography
-                className={`${classes.headerLink} ${
-                  router.pathname === link.href ? "active" : "hover-underline"
-                }`}
+                className={`${classes.headerLink}`}
                 style={{ fontWeight: "600" }}
                 variant="h5"
               >

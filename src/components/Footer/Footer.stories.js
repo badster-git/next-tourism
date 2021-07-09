@@ -6,6 +6,6 @@ export default {
 };
 
 const Template = (args) => (
-  <Footer {...args}>Default Footer</Footer>
+  <Footer {...args}></Footer>
 );
 export const Primary = Template.bind({});

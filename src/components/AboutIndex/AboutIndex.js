@@ -76,7 +76,6 @@ export const AboutIndex = () => {
           </Typography>
         </Container>
         <CustomTabs />
-        <div></div>
       </Container>
     </section>
   );

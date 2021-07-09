@@ -4,7 +4,7 @@ import { red } from "@material-ui/core/colors";
 const mainWhite = "#fff";
 const mainBlue = "#006aff";
 const mainBlack = "#000";
-const mainGray = "#443d47";
+const mainGray = "#67616b";
 const lightBrown = "#d6ad60";
 const lightBlue = "#5d87d6";
 const lightGray = "rgb(176 176 176 / 87%)";
@@ -65,6 +65,12 @@ let coreTheme = createMuiTheme({
         "& $indicator": {
           backgroundColor: lightBrown,
         },
+      },
+    },
+    MuiTextField: {
+      root: {
+        backgroundColor: mainWhite,
+        borderRadius: "5px",
       },
     },
   },
@@ -130,7 +136,7 @@ let coreTheme = createMuiTheme({
       },
       "&.MuiButton-root:hover": {
         backgroundColor: darkBlue,
-        border: "1px solid rgb(209, 209, 213)",
+        color: mainWhite,
       },
     },
   },

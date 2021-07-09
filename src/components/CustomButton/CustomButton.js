@@ -136,7 +136,7 @@ export const CustomButton = ({ children, title, ...rest }) => {
           <TableContainer component={Paper}>
             <Table
               className={classes.table}
-              aria-label="simple table"
+              aria-label="table"
               style={{ borderRight: "1px solid #ececec" }}
             >
               <TableHead>
@@ -167,7 +167,7 @@ export const CustomButton = ({ children, title, ...rest }) => {
             </Table>
           </TableContainer>
           <TableContainer component={Paper}>
-            <Table className={classes.table} aria-label="simple table">
+            <Table className={classes.table} aria-label="table">
               <TableHead>
                 <TableRow>
                   <TableCell className={classes.tableName}>

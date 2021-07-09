@@ -155,7 +155,7 @@ export const CustomTabs = ({ children, ...rest }) => {
           onChange={handleChange}
           variant="fullWidth"
           scrollButtons="auto"
-          aria-label="full width tabs example"
+          aria-label="full width tabs"
         >
           {tabs.map((tab, idx) => (
             <Tab
