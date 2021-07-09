@@ -127,7 +127,6 @@ let coreTheme = createMuiTheme({
     },
     button: {
       backgroundColor: lightBlue,
-
       "&.MuiButton-outlinedPrimary": {
         color: `${mainBlue} !important`,
       },

@@ -10,10 +10,27 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "flex-start",
     backgroundColor: theme.palette.common.gray,
+    [theme.breakpoints.down(1490)]: {
+      padding: "80px 5px 30px",
+    },
+    [theme.breakpoints.down(1024)]: {
+      flexDirection: "column-reverse",
+      padding: "70px 98px 60px",
+    },
+    [theme.breakpoints.down(860)]: {
+      padding: "70px 28px 60px",
+    },
+    [theme.breakpoints.down(640)]: {
+      padding: "70px 8px 60px",
+    },
   },
   links: {
     display: "flex",
     marginTop: "-3px",
+    [theme.breakpoints.down(1024)]: {
+      justifyContent: "space-between",
+      marginTop: "30px",
+    },
   },
   footerLink: {
     textDecoration: "none",
@@ -29,11 +46,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footerNewsletter: {
-    [theme.breakpoints.down(1024)]: {
-      minWidth: "35%",
-      maxWidth: "460px",
-    },
     marginLeft: "auto",
+    width: "600px",
+    [theme.breakpoints.down(1024)]: {
+      width: "100%",
+    },
+    [theme.breakpoints.down(640)]: {
+      padding: "0",
+    },
+  },
+  linkColumn: {
+    [theme.breakpoints.down(1240)]: {
+      paddingLeft: "3px",
+    },
   },
 }));
 
@@ -58,7 +83,11 @@ export const Footer = () => {
            */}
           {cols.map((col) => (
             // Sets up the list elements for each column
-            <ul key={col} style={{ marginRight: "27px", listStyle: "none" }}>
+            <ul
+              key={col}
+              className={classes.linkColumn}
+              style={{ marginRight: "27px", listStyle: "none" }}
+            >
               {upperData
                 .filter((link) => link.col === col)
                 .map((col_link) => (
@@ -78,7 +107,6 @@ export const Footer = () => {
           <NewsletterForm />
         </Container>
       </Container>
-      <Container maxWidth={false}></Container>
     </footer>
   );
 };

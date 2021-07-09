@@ -25,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
   titleText: {
     color: theme.palette.common.white,
     marginBottom: "30px",
+    [theme.breakpoints.down(640)]: {
+      textAlign: "center"
+    },
   },
 }));
 
