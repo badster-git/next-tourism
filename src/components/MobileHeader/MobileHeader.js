@@ -55,6 +55,7 @@ const MobileHeader = ({ children, ...rest }) => {
           <Container
             style={{
               alignItems: "center",
+              justifyContent: matchesSM ?  "center" : "flex-start",
               display: "flex",
             }}
             disableGutters
