@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import SearchIcon from "@material-ui/icons/Search";
+import Link from "next/link";
 import withScroll from "../../../hoc/withScroll.hoc.js";
 import logo from "../../../public/logo/logo.png";
 
