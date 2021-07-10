@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Typography, Container, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerLink: {
     textDecoration: "none",
+    color: theme.palette.common.black,
     "&.active": {
       color: theme.palette.common.lightBrown,
     },
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   borderBottom: {
     borderBottom: `2px solid ${theme.palette.common.lightBrown}`,
     position: "absolute",
-    bottom: 0,
+    bottom: -4,
     left: "25%",
     width: "50%",
   },
@@ -112,22 +113,24 @@ const Header = ({ children, ...rest }) => {
                     }}
                     key={link.id}
                   >
-                    <Typography
-                      className={`${classes.headerLink} ${
-                        router.pathname === link.href
-                          ? "active"
-                          : "hover-underline"
-                      }`}
-                      style={{ fontWeight: "600" }}
-                      variant="body1"
-                    >
-                      {link.title}
-                      {router.pathname === link.href ? (
-                        <span className={classes.borderBottom}></span>
-                      ) : (
-                        ""
-                      )}
-                    </Typography>
+                    <Link href={link.href}>
+                      <Typography
+                        className={`${classes.headerLink} ${
+                          router.pathname === link.href
+                            ? "active"
+                            : "hover-underline"
+                        }`}
+                        style={{ fontWeight: "600" }}
+                        variant="body1"
+                      >
+                        {link.title}
+                        {router.pathname === link.href ? (
+                          <span className={classes.borderBottom}></span>
+                        ) : (
+                          ""
+                        )}
+                      </Typography>
+                    </Link>
                   </li>
                 ))}
               </ul>
