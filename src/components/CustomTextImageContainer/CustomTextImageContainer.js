@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
-import { Container, Box, Typography } from "@material-ui/core";
+import { Container,  Typography } from "@material-ui/core";
 import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({

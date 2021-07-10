@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   formBtn: {
-    maxWidth: "200px",
+    maxWidth: "170px",
   },
   formText: {
     marginRight: "20px",
@@ -69,7 +69,7 @@ export const NewsletterForm = () => {
           fullWidth
           type="submit"
         >
-          Submit
+          Subscribe
         </Button>
       </form>
     </div>

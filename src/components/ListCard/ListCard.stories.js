@@ -11,6 +11,7 @@ const Template = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
 	title: "Rome",
+	subtitle: "View Tours",
 	picture: "europe-locations/rome.jpg",
 	href: "/rome-tours"
 

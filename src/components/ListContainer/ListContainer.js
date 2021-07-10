@@ -54,6 +54,7 @@ export const ListContainer = ({ list, maxSize, ...rest }) => {
               >
                 <ListCard
                   title={location.title}
+                  subtitle={location.subtitle}
                   picture={location.picture}
                   href={location.href}
                 />

@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
 
     "&:hover": {
       boxShadow: "0 32px 50px 0 rgb(0 0 0 / 10%)",
-			cursor: "pointer",
       border: "none",
       "& $title": {
         color: theme.palette.common.lightBrown,
@@ -22,9 +21,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(20),
     height: theme.spacing(20),
   },
-  title: {
-
-  },
+  title: {},
   detailsContainer: {
     display: "flex",
     flexDirection: "column",
@@ -35,22 +32,36 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const ListCard = ({ title, picture, href, ...rest }) => {
+export const ListCard = ({ title, subtitle, picture, href, ...rest }) => {
   const classes = useStyles();
 
+  if (href)
+    return (
+      <Link href={href ? href : ""}>
+        <Container maxWidth="sm" style={{cursor: "pointer"}} className={classes.mainCard} {...rest}>
+          <Avatar className={classes.largePicture} alt={title} src={picture} />
+          <div className={classes.detailsContainer}>
+            <Typography className={classes.title} variant="h5">
+              {title}
+            </Typography>
+            <Typography className={classes.viewTours} variant="body1">
+              {subtitle}
+            </Typography>
+          </div>
+        </Container>
+      </Link>
+    );
   return (
-    <Link href={href}>
-      <Container maxWidth="sm" className={classes.mainCard}>
-        <Avatar className={classes.largePicture} alt={title} src={picture} />
-        <div className={classes.detailsContainer}>
-          <Typography className={classes.title} variant="h5">
-            {title}
-          </Typography>
-          <Typography className={classes.viewTours} variant="body1">
-            View Tours
-          </Typography>
-        </div>
-      </Container>
-    </Link>
+    <Container maxWidth="sm" className={classes.mainCard} {...rest}>
+      <Avatar className={classes.largePicture} alt={title} src={picture} />
+      <div className={classes.detailsContainer}>
+        <Typography className={classes.title} variant="h5">
+          {title}
+        </Typography>
+        <Typography className={classes.viewTours} variant="body1">
+          {subtitle}
+        </Typography>
+      </div>
+    </Container>
   );
 };
