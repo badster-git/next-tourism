@@ -42,14 +42,14 @@ export const ListCard = ({ title, picture, href, ...rest }) => {
     <Link href={href}>
       <Container maxWidth="sm" className={classes.mainCard}>
         <Avatar className={classes.largePicture} alt={title} src={picture} />
-        <Box component="div" className={classes.detailsContainer}>
+        <div className={classes.detailsContainer}>
           <Typography className={classes.title} variant="h5">
             {title}
           </Typography>
           <Typography className={classes.viewTours} variant="body1">
             View Tours
           </Typography>
-        </Box>
+        </div>
       </Container>
     </Link>
   );

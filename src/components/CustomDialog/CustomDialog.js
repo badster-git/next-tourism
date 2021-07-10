@@ -81,7 +81,7 @@ export const CustomDialog = (props) => {
               >
                 {link.title}
                 {router.pathname === link.href ? (
-                  <Box className={classes.borderBottom}></Box>
+                  <div className={classes.borderBottom}></div>
                 ) : (
                   ""
                 )}
