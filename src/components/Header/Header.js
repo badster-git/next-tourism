@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Typography, Container, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import SearchIcon from "@material-ui/icons/Search";
+import Link from "next/link";
 import withScroll from "../../../hoc/withScroll.hoc.js";
 import logo from "../../../public/logo/logo.png";
 
@@ -27,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerLink: {
     textDecoration: "none",
+    color: theme.palette.common.black,
     "&.active": {
       color: theme.palette.common.lightBrown,
     },
@@ -40,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   borderBottom: {
     borderBottom: `2px solid ${theme.palette.common.lightBrown}`,
     position: "absolute",
-    bottom: 0,
+    bottom: -4,
     left: "25%",
     width: "50%",
   },
@@ -60,12 +62,12 @@ const Header = ({ children, ...rest }) => {
   const router = useRouter();
 
   return (
-    <Box
+    <div
       style={{ top: "0px", margin: "auto 0" }}
       className={classes.headerInner}
     >
       <Container className={classes.container}>
-        <Box
+        <div
           style={{
             position: "relative",
             display: "flex",
@@ -73,7 +75,7 @@ const Header = ({ children, ...rest }) => {
             justifyContent: "center",
           }}
         >
-          <Box
+          <div
             style={{
               alignItems: "center",
               display: "flex",
@@ -81,9 +83,9 @@ const Header = ({ children, ...rest }) => {
             }}
           >
             <Image src={logo} alt="Logo of site" width={310} height={88} />
-          </Box>
-        </Box>
-        <Box
+          </div>
+        </div>
+        <div
           style={{
             display: "flex",
             justifyContent: "flex-end",
@@ -94,11 +96,11 @@ const Header = ({ children, ...rest }) => {
             style={{ position: "absolute" }}
             className={classes.icon}
           />
-        </Box>
+        </div>
       </Container>
       <Container disableGutters style={{ marginTop: "10px" }}>
-        <Box style={{ padding: "0 15px" }}>
-          <Box style={{ paddingBottom: "15px" }}>
+        <div style={{ padding: "0 15px" }}>
+          <div style={{ paddingBottom: "15px" }}>
             <nav className={classes.bottomNav}>
               <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
                 {links.map((link) => (
@@ -111,30 +113,32 @@ const Header = ({ children, ...rest }) => {
                     }}
                     key={link.id}
                   >
-                    <Typography
-                      className={`${classes.headerLink} ${
-                        router.pathname === link.href
-                          ? "active"
-                          : "hover-underline"
-                      }`}
-                      style={{ fontWeight: "600" }}
-                      variant="body1"
-                    >
-                      {link.title}
-                      {router.pathname === link.href ? (
-                        <span className={classes.borderBottom}></span>
-                      ) : (
-                        ""
-                      )}
-                    </Typography>
+                    <Link href={link.href}>
+                      <Typography
+                        className={`${classes.headerLink} ${
+                          router.pathname === link.href
+                            ? "active"
+                            : "hover-underline"
+                        }`}
+                        style={{ fontWeight: "600" }}
+                        variant="body1"
+                      >
+                        {link.title}
+                        {router.pathname === link.href ? (
+                          <span className={classes.borderBottom}></span>
+                        ) : (
+                          ""
+                        )}
+                      </Typography>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </nav>
-          </Box>
-        </Box>
+          </div>
+        </div>
       </Container>
-    </Box>
+    </div>
   );
 };
 

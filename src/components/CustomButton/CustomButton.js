@@ -132,7 +132,7 @@ export const CustomButton = ({ children, title, ...rest }) => {
         PaperProps={{ onMouseEnter: popoverEnter, onMouseLeave: popoverLeave }}
         disableScrollLock
       >
-        <Box className={classes.cityList} style={{ display: "flex" }}>
+        <div className={classes.cityList} style={{ display: "flex" }}>
           <TableContainer component={Paper}>
             <Table
               className={classes.table}
@@ -195,7 +195,7 @@ export const CustomButton = ({ children, title, ...rest }) => {
               </TableBody>
             </Table>
           </TableContainer>
-        </Box>
+        </div>
       </Popover>
     </>
   );
