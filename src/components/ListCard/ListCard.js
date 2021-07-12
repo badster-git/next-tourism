@@ -37,7 +37,7 @@ export const ListCard = ({ title, subtitle, picture, href, ...rest }) => {
 
   if (href)
     return (
-      <Link href={href ? href : ""}>
+      <Link href="/[id]" as={`${href}`}>
         <Container maxWidth="sm" style={{cursor: "pointer"}} className={classes.mainCard} {...rest}>
           <Avatar className={classes.largePicture} alt={title} src={picture} />
           <div className={classes.detailsContainer}>
