@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 import { TOUR_PACKAGES } from '../../data/TOUR_PACKAGES';
 import { Layout } from "../components/Layout/Layout";
 import { TourTop } from '../components/TourTop/TourTop';
+import { TourContainer } from '../components/TourContainer/TourContainer';
 
 const Tour = ({ tour }) => {
   const router = useRouter()
@@ -9,6 +10,7 @@ const Tour = ({ tour }) => {
   return(
     <Layout title="Next Touris">
       <TourTop title={tour.title} menu={tour.menu} />
+      <TourContainer data={tour.data}  />
     </Layout>
   )
 }

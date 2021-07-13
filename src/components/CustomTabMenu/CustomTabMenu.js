@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
   navTabs: {
     display: "flex",
     justifyContent: "center",
-    borderBottom: "1px solid #dbe0e6",
     alignItems: "center",
   },
 }));
