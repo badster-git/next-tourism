@@ -37,8 +37,13 @@ export const ListCard = ({ title, subtitle, picture, href, ...rest }) => {
 
   if (href)
     return (
-      <Link href="/[id]" as={`${href}`}>
-        <Container maxWidth="sm" style={{cursor: "pointer"}} className={classes.mainCard} {...rest}>
+      <Link href="/[path]" as={`${href}`}>
+        <Container
+          maxWidth="sm"
+          style={{ cursor: "pointer" }}
+          className={classes.mainCard}
+          {...rest}
+        >
           <Avatar className={classes.largePicture} alt={title} src={picture} />
           <div className={classes.detailsContainer}>
             <Typography className={classes.title} variant="h5">
@@ -52,16 +57,16 @@ export const ListCard = ({ title, subtitle, picture, href, ...rest }) => {
       </Link>
     );
   return (
-    <Container maxWidth="sm" className={classes.mainCard} {...rest}>
-      <Avatar className={classes.largePicture} alt={title} src={picture} />
-      <div className={classes.detailsContainer}>
-        <Typography className={classes.title} variant="h5">
-          {title}
-        </Typography>
-        <Typography className={classes.viewTours} variant="body1">
-          {subtitle}
-        </Typography>
-      </div>
-    </Container>
+      <Container maxWidth="sm" className={classes.mainCard} {...rest}>
+        <Avatar className={classes.largePicture} alt={title} src={picture} />
+        <div className={classes.detailsContainer}>
+          <Typography className={classes.title} variant="h5">
+            {title}
+          </Typography>
+          <Typography className={classes.viewTours} variant="body1">
+            {subtitle}
+          </Typography>
+        </div>
+      </Container>
   );
 };

@@ -179,7 +179,7 @@ export const USA_TOURS = [
         id: 1,
         title: "New York City",
         subtitle: "View Tours",
-        href: "/new-york-city",
+        href: "/new-york-tours",
         picture: "usa-locations/original/ny.jpg",
       },
     ],
