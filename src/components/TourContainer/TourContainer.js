@@ -2,7 +2,6 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { makeStyles } from "@material-ui/styles";
 import { Container, Typography } from "@material-ui/core";
 import { TourCard } from "../TourCard/TourCard";
-import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
   tourListSection: {
@@ -13,11 +12,25 @@ const useStyles = makeStyles((theme) => ({
   tourListTitle: {
     textAlign: "center",
     width: "88%",
+    [theme.breakpoints.down(1024)]: {
+      width: "100%",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+    },
   },
   tourListData: {
     paddingTop: "3em",
     width: "88%",
     margin: "0 auto",
+    [theme.breakpoints.down(1024)]: {
+      width: "100%",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+    },
+    [theme.breakpoints.down(640)]: {
+      paddingLeft: "0",
+      paddingRight: "0",
+    },
   },
   tourListItems: {
     display: "flex",
@@ -25,12 +38,16 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexFlow: "row wrap",
     alignItems: "stretch",
+    [theme.breakpoints.down(1024)]: {
+      flexFlow: "row wrap",
+      margin: "0 auto",
+    },
   },
   icon: {
     height: "75px",
     width: "75px",
     color: theme.palette.common.lightBrown,
-  }
+  },
 }));
 
 export const TourContainer = ({ data }) => {

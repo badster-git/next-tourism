@@ -13,6 +13,18 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "0",
     flex: "0 1 calc(100% / 3)",
     width: "calc(100% / 3)",
+    [theme.breakpoints.down(1024)]: {
+      width: "calc(100% / 2)",
+      flex: "0 1 calc(100% / 2)",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+    },
+    [theme.breakpoints.down(640)]: {
+      width: "calc(100% / 1)",
+      flex: "0 1 calc(100% / 1)",
+      paddingLeft: "10px",
+      paddingRight: "10px",
+    },
   },
   title: {
     width: "100%",
@@ -25,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     border: "1px solid #d8d8d8",
     transition: "box-shadow .2s ease,border-color .2s ease",
-		cursor: "pointer",
+    cursor: "pointer",
     paddingBottom: "25px",
     "&:hover": {
       boxShadow: "0 32px 50px 0 rgb(0 0 0 / 10%)",
@@ -42,6 +54,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundPosition: "50%",
     position: "relative",
+    [theme.breakpoints.down(1023)]: {
+      minHeight: "240px",
+    },
   },
   tourPrice: {
     right: 0,
@@ -99,10 +114,7 @@ export const TourCard = ({
         disableGutters
       >
         <div className={classes.detailsContainer}>
-          <Container
-            maxWidth={false}
-            disableGutters
-          >
+          <Container maxWidth={false} disableGutters>
             <Container
               maxWidth={false}
               style={{

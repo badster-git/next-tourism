@@ -6,9 +6,8 @@ import { TourContainer } from '../components/TourContainer/TourContainer';
 
 const Tour = ({ tour }) => {
   const router = useRouter()
-  console.log(tour);
   return(
-    <Layout title="Next Touris">
+    <Layout title={`Next Tourism - ${tour.title}`}>
       <TourTop title={tour.title} menu={tour.menu} />
       <TourContainer data={tour.data}  />
     </Layout>
@@ -29,7 +28,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
-  console.log(params);
   const tours = TOUR_PACKAGES.filter(
     (p) => p.path.toString() === params.path
   );
