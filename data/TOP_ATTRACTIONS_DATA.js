@@ -7,12 +7,12 @@ export const TOP_ATTRACTIONS_DATA_EUROPE = [
   {
     id: 2,
     title: "Pompeii",
-    href: "/#tag-pompeii-tours",
+    href: "/rome-tours/#tag-day-trips-from-rome",
   },
   {
     id: 3,
     title: "St Mark's Basilica",
-    href: "/venice-tours/#tag-st-marks-basilica--doges-palace-tours",
+    href: "/venice-tours/#tag-st-marks-basilica-doges-palace-tours",
   },
   {
     id: 4,
@@ -22,7 +22,7 @@ export const TOP_ATTRACTIONS_DATA_EUROPE = [
   {
     id: 5,
     title: "Micahelangelo's David",
-    href: "/florence-tours/#tag-david--duomo-tours",
+    href: "/florence-tours/#tag-david-duomo-tours",
   },
   {
     id: 6,
@@ -35,21 +35,21 @@ export const TOP_ATTRACTIONS_DATA_USA = [
   {
     id: 1,
     title: "Statue of Liberty",
-    href: "/new-york-tours/statue-of-liberty-tour-ellis-islane-tour",
+    href: "/new-york-tours/#tag-statue-of-liberty-tour-ellis-islane-tour",
   },
   {
     id: 2,
     title: "Alcatraz Island",
-    href: "/san-fransisco-tour/alcatraz-ticket-and-chinatown-tour",
+    href: "/san-francisco-tours/#tag-alcatraz-ticket-and-chinatown-tour",
   },
   {
     id: 3,
     title: "The French Quarter",
-    href: "/new-orleans-tours/french-quarter-tour",
+    href: "/new-orleans-city-tours/#tag-essential-new-orleans",
   },
   {
     id: 4,
     title: "The Grand Canyon",
-    href: "/grand-canyon-tours",
+    href: "/grand-canyon-tours/#tag-essential-grand-canyon",
   },
 ];

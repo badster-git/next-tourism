@@ -57,6 +57,7 @@ export const ListContainer = ({ list, maxSize, ...rest }) => {
                   subtitle={location.subtitle}
                   picture={location.picture}
                   href={location.href}
+                  path={location.path}
                 />
               </Grid>
             ))}

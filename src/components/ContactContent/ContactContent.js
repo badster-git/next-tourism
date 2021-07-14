@@ -2,9 +2,9 @@ import { Container, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import PermPhoneMsgIcon from "@material-ui/icons/PermPhoneMsg";
 import ExploreIcon from "@material-ui/icons/Explore";
-import Link from "next/link";
-import { CONTACT_DATA } from "../../../data/CONTACT_DATA";
+import { CONTACT_DATA, CONTACT_MENU_DATA } from "../../../data/CONTACT_DATA";
 import { ListCard } from "../ListCard/ListCard";
+import { CustomTabMenu } from "../CustomTabMenu/CustomTabMenu";
 
 const useStyles = makeStyles((theme) => ({
   mainContactContainer: {
@@ -18,21 +18,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     [theme.breakpoints.down(640)]: {
       textAlign: "center",
-    },
-  },
-  navTabs: {
-    display: "flex",
-    justifyContent: "center",
-    borderBottom: "1px solid #dbe0e6",
-    alignItems: "center",
-  },
-  tabItem: {
-    padding: "17px 10px",
-    color: theme.palette.common.lightGray,
-    position: "relative",
-    cursor: "pointer",
-    "&:hover": {
-      color: theme.palette.common.lightBrown,
     },
   },
   mainCustomServiceContainer: {
@@ -96,6 +81,7 @@ const useStyles = makeStyles((theme) => ({
 export const ContactContent = () => {
   const classes = useStyles();
   const data = CONTACT_DATA;
+  const menu_data = CONTACT_MENU_DATA;
   return (
     <Container className={classes.mainContactContainer} maxWidth={false}>
       <Container maxWidth={false}>
@@ -103,18 +89,7 @@ export const ContactContent = () => {
           Contact
         </Typography>
       </Container>
-      <Container className={classes.navTabs} maxWidth={false} disableGutters>
-        <Link href="#customerservice">
-          <Typography className={classes.tabItem} variant="body1">
-            CUSTOMER SERVICE
-          </Typography>
-        </Link>
-        <Link href="#problems">
-          <Typography className={classes.tabItem} variant="body1">
-            PROBLEMS WHILE TRAVELING
-          </Typography>
-        </Link>
-      </Container>
+      <CustomTabMenu menu={menu_data} />
       <Container
         component="section"
         id="customerservice"
