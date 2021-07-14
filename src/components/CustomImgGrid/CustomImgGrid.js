@@ -76,36 +76,34 @@ export const CustomImgGrid = ({ children, locations, ...rest }) => {
           .filter((location) => location.size === "big")
           .map((bigLocation) => (
             <Link href={bigLocation.href} passHref key={bigLocation.id}>
-              <>
-                <div className={classes.place}>
+              <div className={classes.place}>
+                <div
+                  className={classes.placeImg}
+                  style={{
+                    backgroundImage: `url(${bigLocation.picture})`,
+                    backgroundSize: "cover",
+                  }}
+                >
                   <div
                     className={classes.placeImg}
                     style={{
-                      backgroundImage: `url(${bigLocation.picture})`,
-                      backgroundSize: "cover",
+                      background:
+                        "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1))",
                     }}
-                  >
-                    <div
-                      className={classes.placeImg}
-                      style={{
-                        background:
-                          "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1))",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      textShadow: "0 0 10px #202020",
-                      pointerEvents: "none",
-                    }}
-                  >
-                    <Typography variant="h3" component="h1" color="primary">
-                      {bigLocation.title}
-                    </Typography>
-                  </div>
+                  />
                 </div>
-              </>
+                <div
+                  style={{
+                    position: "absolute",
+                    textShadow: "0 0 10px #202020",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <Typography variant="h3" component="h1" color="primary">
+                    {bigLocation.title}
+                  </Typography>
+                </div>
+              </div>
             </Link>
           ))}
       </div>
@@ -116,36 +114,34 @@ export const CustomImgGrid = ({ children, locations, ...rest }) => {
           .filter((location) => location.size === "small")
           .map((smallLocation) => (
             <Link href={smallLocation.href} passHref key={smallLocation.id}>
-              <>
-                <div className={classes.placeSecond}>
+              <div className={classes.placeSecond}>
+                <div
+                  className={classes.placeImg}
+                  style={{
+                    backgroundImage: `url(${smallLocation.picture})`,
+                    backgroundSize: "cover",
+                  }}
+                >
                   <div
                     className={classes.placeImg}
                     style={{
-                      backgroundImage: `url(${smallLocation.picture})`,
-                      backgroundSize: "cover",
+                      background:
+                        "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1))",
                     }}
-                  >
-                    <div
-                      className={classes.placeImg}
-                      style={{
-                        background:
-                          "linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1))",
-                      }}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      textShadow: "0 0 10px #202020",
-                      pointerEvents: "none"
-                    }}
-                  >
-                    <Typography variant="h3" component="h1" color="primary">
-                      {smallLocation.title}
-                    </Typography>
-                  </div>
+                  />
                 </div>
-              </>
+                <div
+                  style={{
+                    position: "absolute",
+                    textShadow: "0 0 10px #202020",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <Typography variant="h3" component="h1" color="primary">
+                    {smallLocation.title}
+                  </Typography>
+                </div>
+              </div>
             </Link>
           ))}
       </div>

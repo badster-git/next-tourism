@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: "90px",
     height: "75px",
-    backgroundColor: "brown",
+    backgroundColor: theme.palette.common.lightBrown, 
     color: theme.palette.common.white,
     position: "absolute",
     textAlign: "center",
