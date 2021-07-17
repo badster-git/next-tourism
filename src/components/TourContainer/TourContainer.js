@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const TourContainer = ({ data }) => {
+export const TourContainer = ({ data, path }) => {
   const classes = useStyles();
 
   return (
@@ -104,6 +104,7 @@ export const TourContainer = ({ data }) => {
                     max={tour.max}
                     price={tour.price}
                     picture={tour.picture}
+                    path={path}
                     href={tour.href}
                   />
                 ))}

@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: "90px",
     height: "75px",
-    backgroundColor: theme.palette.common.lightBrown, 
+    backgroundColor: theme.palette.common.lightBrown,
     color: theme.palette.common.white,
     position: "absolute",
     textAlign: "center",
@@ -101,12 +101,13 @@ export const TourCard = ({
   max,
   price,
   picture,
+  path,
   href,
   ...rest
 }) => {
   const classes = useStyles();
   return (
-    <Link href="/[path]" as={`${href}`}>
+    <Link href="/[path]/[tour]" as={`/${path}/${href}`}>
       <Container
         maxWidth={false}
         className={classes.mainCard}

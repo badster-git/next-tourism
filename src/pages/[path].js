@@ -9,7 +9,7 @@ const Tour = ({ tour }) => {
   return(
     <Layout title={`Next Tourism - ${tour.title}`}>
       <TourTop title={tour.title} menu={tour.menu} />
-      <TourContainer data={tour.data}  />
+      <TourContainer data={tour.data} path={tour.path}  />
     </Layout>
   )
 }
