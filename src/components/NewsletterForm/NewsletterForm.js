@@ -135,7 +135,7 @@ export const NewsletterForm = () => {
             variant="contained"
             fullWidth
             type="submit"
-            disabled={formik.isSubmitting || formik.status ? formik.status.sent : "" }
+            disabled={formik.isSubmitting || formik.status?.sent}
           >
             {formik.status
               ? formik.status.sent
