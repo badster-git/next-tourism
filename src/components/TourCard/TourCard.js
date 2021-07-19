@@ -135,7 +135,7 @@ export const TourCard = ({
             disableGutters
             className={classes.tourDetails}
           >
-            <Link href={href}>
+            <Link href="/[path]/[tour]" as={`/${path}/${href}`}>
               <Typography className={classes.title} variant="h5">
                 {title}
               </Typography>
