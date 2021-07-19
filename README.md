@@ -1,2 +1,2 @@
 # Next Tourism
-Link to site [http://next-tourism.vercel.app/](here)
+Link to live-site [here](http://next-tourism.vercel.app/)
