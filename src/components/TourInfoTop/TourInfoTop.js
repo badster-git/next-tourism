@@ -3,11 +3,15 @@ import { Container, Typography } from "@material-ui/core";
 import Image from "next/image";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import GroupIcon from "@material-ui/icons/Group";
+import { TourInfoDescription } from "../TourInfoDescription/TourInfoDescription";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     marginTop: "25px",
     overflow: "hidden",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
   },
   headerInfo: {
     display: "flex",
@@ -29,9 +33,21 @@ const useStyles = makeStyles((theme) => ({
     height: "32px",
     backgroundColor: "#ebebeb",
   },
+  imageContainer: {
+    display: "flex",
+    justifyContent: "center",
+  },
 }));
 
-export const TourInfoTop = ({ title, duration, max, picture }) => {
+export const TourInfoTop = ({
+  title,
+  duration,
+  max,
+  picture,
+  why,
+  descriptionTitle,
+  tourDescription,
+}) => {
   const classes = useStyles();
 
   return (
@@ -76,9 +92,18 @@ export const TourInfoTop = ({ title, duration, max, picture }) => {
           </Container>
         </Container>
       </Container>
-      <Container disableGutters maxWidth={false}>
-        <Image src={picture} width={840} height={490} />
+      <Container
+        disableGutters
+        maxWidth={false}
+        className={classes.imageContainer}
+      >
+        <Image src={picture} width={870} height={490} />
       </Container>
+      <TourInfoDescription
+        whyText={why}
+        descriptionTitle={descriptionTitle}
+        tourDescription={tourDescription}
+      />
     </Container>
   );
 };

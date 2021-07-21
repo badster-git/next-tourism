@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
   mainTourInfoContainer: {
     marginTop: "180px",
     width: "88%",
-    [theme.breakpoints.down(1250)]: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    position: "relative",
+    [theme.breakpoints.up(1250)]: {
       maxWidth: "1280px",
     },
   },
@@ -56,7 +59,10 @@ export const TourProductInfo = ({ tour }) => {
             title={tour.title}
             duration={tour.duration}
             max={tour.max}
-						picture={tour.picture}
+            picture={tour.picture}
+            why={tour.why}
+            descriptionTitle={tour.descriptionTitle}
+            tourDescription={tour.tourDescription}
           />
         </Container>
       </Container>
