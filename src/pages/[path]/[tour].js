@@ -1,11 +1,16 @@
 import { useRouter } from "next/router";
 import { Layout } from "../../components/Layout/Layout";
 import { TOUR_PACKAGES } from "../../../data/TOUR_PACKAGES";
+import { TourProductInfo } from "../../components/TourProductInfo/TourProductInfo";
 
 const TourInformation = ({ tour }) => {
   const router = useRouter();
   //console.log(tour);
-  return <Layout title={`Next Tourism - ${tour.title}`}></Layout>;
+  return (
+    <Layout title={`Next Tourism - ${tour.title}`}>
+      <TourProductInfo tour={tour} />
+    </Layout>
+  );
 };
 
 export async function getStaticPaths() {
@@ -37,13 +42,15 @@ export async function getStaticProps({ params }) {
 
   const tours = TOUR_PACKAGES.filter((item) => item.path === params.path);
 
-  const filteredTours = tours
+  let filteredTours = tours
     .map((tour) =>
       tour.data.map((item) =>
         item.tours.filter((link) => link.href === params.tour)
       )
     )
     .flat(Infinity);
+
+  filteredTours[0].root = params.path;
 
   return {
     props: {
