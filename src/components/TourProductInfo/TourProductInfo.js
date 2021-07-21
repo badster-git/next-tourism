@@ -29,9 +29,6 @@ export const TourProductInfo = ({ tour }) => {
     return name;
   }, "");
 
-  console.log(tourName);
-  console.log(tour);
-
   const handleClick = (e) => {
     e.preventDefault();
   };
