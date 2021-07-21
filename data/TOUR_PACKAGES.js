@@ -736,7 +736,7 @@ export const TOUR_PACKAGES = [
             max: "10",
             price: "$21",
             picture: "/tours/san-francisco/san-francisco-tour-4.jpg",
-            href: "fishermans-whard-san-francisco-tour",
+            href: "walking-tour",
           },
           {
             id: "tour-10",
@@ -1607,7 +1607,7 @@ export const TOUR_PACKAGES = [
             max: "19",
             price: "$141",
             picture: "/tours/florence/florence-tour-4.jpg",
-            href: "florence-in-a-day-tours",
+            href: "florence-in-a-day-tour",
             why:
               "See the best of Florence in a day with an expert local guide. For seven hours you'll be immersed in history, art and architecture; skip long lines at precious Renaissance sights like Michelangeo's David, the Uffizi Gallery; then take to the streets to experience the endless charm of Florence at the Florence Duomo, Ponte Vecchio and the outdoor sculpture gallery of Piazza della Signoria.",
             descriptionTitle:
@@ -1694,8 +1694,8 @@ export const TOUR_PACKAGES = [
             duration: "1.5 hours",
             max: "12",
             price: "$79",
-            picture: "/tours/florence/florence-tour-1.jpg",
-            href: "vip-florence-duomo-cathedral",
+            picture: "/tours/florence/florence-tour-4.jpg",
+            href: "florence-in-a-day-tour",
           },
           {
             id: "tour-9",
@@ -1705,23 +1705,11 @@ export const TOUR_PACKAGES = [
             duration: "7 hrs 15 mins",
             max: "19",
             price: "$141",
-            picture: "/tours/florence/florence-tour-4.jpg",
-            href: "florence-in-a-day-tour",
-          },
-          {
-            id: "tour-10",
-            title:
-              "Best of Florence with Special-Access Florence Duomo Tour, David & City Stroll",
-            description:
-              "A Florence walking tour that gets you inside the Florence Duomo without waiting in line and takes you to see the David.",
-            duration: "3 hrs 15 mins",
-            max: "10",
-            price: "$93",
             picture: "/tours/florence/florence-tour-5.jpg",
             href: "florence-duomo-tour",
           },
           {
-            id: "tour-11",
+            id: "tour-10",
             title:
               "VIP David & Duomo Tour: Early Accademia Tour & Skip the Line Dome Climb with Exclusive Terrace Access",
             description:
@@ -1731,9 +1719,19 @@ export const TOUR_PACKAGES = [
             price: "$140",
             picture: "/tours/florence/florence-tour-7.jpg",
             href: "vip-florence-duomo-tour",
+            why:
+              "Dive into the art and architecture of Florence with this all-access tour of the city’s most jaw-dropping attractions. Slip into the famed Accademia Galleria before the crowds, arriving at Michelangelo's David without the bustle of others. Soak up the VIP treatment with special access to the terraces of Santa Maria del Fiore - Florence's premier cathedral. (You know, the red domed beauty in every iconic shot!) To cap your time, skip the line to climb the dome (should you wish) experiencing this incomparable piece of architecture, and taking in the surrounding beauty of this incredible Italian city.",
+            descriptionTitle: "Take a shortcut directly to the Duomo rooftop",
+            tourDescription: [
+              "This once-in-a-lifetime tour of David and the Duomo gets you skip-the-line access at two of Florence’s most in-demand attractions. Let a local expert guide lead the way and revel at some of the greatest art and architecture produced during the Italian Renaissance. Visit Michelangelo’s David before the crowds show up; enjoy exclusive access to the famed Duomo of Florence's terraces and climb that incomparable dome all without waiting in line.",
+              "At your morning meeting point, greet your local expert guide and an intimate group of 15 people (or fewer) outside the Accademia Galleria. Before the daytime crowds arrive, marvel at Michelangelo’s statue of David as well as his unfinished sculptures known as 'Slaves' granting you incredible insight into the mind of this Master artist.",
+              "After your visit to the Accademia explore the streets of Florence. Your walking tour takes you to Piazza della Signoria, arguably the most famous piazza in the Florentine city where an open-air art gallery and other city highlights abound. As you walk your guide will relay stories that bring the past to life.",
+              "Next, it’s onto Piazza del Duomo where a pause at the Baptistery will display a set of bronze cast doors by Lorenzo Ghiberti, coined the 'Gates of Paradise' by Michelangelo. With a full introduction to the surrounding features, your time will be not only be filled with awe but also inspire both adults and children alike. Looming overhead, the Cathedral of Santa Maria del Fiore, the red-capped duomo brought to life by Filippo Brunelleschi and celebrated in every iconic shot of Florence, awaits your arrival.",
+              "Step onto the cathedral's terraces with special entrance, and then conclude your time with a climb to the top of the duomo (optional) where again, special skip-the-(long)-line gains you access to the top of the world, ahem, Florence. It is here the incredible views over the Italian city seal your growing assumptions about how this city has long inspired the great artists of Italy.",
+            ],
           },
           {
-            id: "tour-12",
+            id: "tour-11",
             title:
               "VIP After Hours at the Florence Accademia with Statue of David",
             description:
@@ -1743,6 +1741,16 @@ export const TOUR_PACKAGES = [
             price: "$63",
             picture: "/tours/florence/florence-tour-8.jpg",
             href: "after-hours-florence-academia-tickets",
+            why:
+              "Enter the Florence Accademia after normal closing hours using VIP Florence Accademia tickets to see Michelangelo's jaw-dropping statue of David without the crowds. Accompanied by an expert local guide for your whole visit, you'll dive into the life of Michelangelo and also enjoy lesser-known parts of the museum.",
+            descriptionTitle: "Take a shortcut directly to the Duomo rooftop",
+            tourDescription: [
+              "Tickets to Michelangelo's David are the most sought-after in Florence. Even rarer are evening Accademia tickets that take you inside the museum at night so you can avoid the lines and crowds that mob the building during the day*. This tour combines evening tickets with a local expert guide and small group of only 15 people or fewer to give you an incomparable encounter with one of the most famous works of art in the world.",
+              "As the sun starts to set over Florence, you'll meet your expert local guide and small group in front of the Accademia. Skipping any lines with your after-hours Florence Accademia tickets, you'll stroll inside and go straight to the most treasured statue in the city (if not the world).",
+              "Standing at the foot of Michelangelo's David, you'll learn the artist's dramatic life story and the improbable history of his most famous statue. With the help of your guide, you won't just see this jaw-dropping work of art, you'll immerse yourself in it and learn why it's one of the most celebrated marbles in history.",
+              "You'll also take a look at Michelangelo's unfinished Slaves to learn even more about his life, then explore the other galleries in the museum to see some of the hidden gems in the collection.",
+              "Finally, finish your elegant evening with a stroll to the Piazza del Duomo, passing the glorious Florence Duomo and Baptistery on the way.",
+            ],
           },
         ],
       },
@@ -1775,6 +1783,15 @@ export const TOUR_PACKAGES = [
             price: "$213",
             picture: "/tours/florence/florence-tour-9.jpg",
             href: "florence-to-pisa-day-trip",
+            why:
+              "This Florence to Pisa day trip visits two treasures of central Italy in one day with an expert guide and small group of no more than 14 people. In private, air-conditioned transport, you’ll travel to Pisa for a full tour of the town - taking in the magnificent Campo Santo - then on to the famous walls of Lucca to see astonishing architecture from Medieval and Renaissance Italy. The tour also features a stopover at a local winery, with wine tastings and homemade seasonal food.",
+            descriptionTitle: "Take a day to explore Pisa and Lucca",
+            tourDescription: [
+              "Your Florence to Pisa day trip starts in Florence 8.45 am when you meet your local guide and small group of no more than 14 people and board a private, air-conditioned minibus to Pisa.",
+              "Arriving in the city, you'll enjoy a Pisa tour around the jaw-dropping UNESCO World Heritage site, the Piazza dei Miracoli and see the celebrated Leaning Tower.",
+              "Afterward, you'll have free time to explore Pisa city center and step inside the Pisa Cathedral. You'll also enjoy an in-depth tour inside the magificent Campo Santo - an ancient cemetery housing examples of medieval and early Renaissance art - before hopping back into your minibus and heading to the hills where you'll visit a local winery for tastings and a gourmet lunch featuring fresh, local ingredients that change seasonally.",
+              "After lunch, you'll drive to the walled city of Lucca, one of the region's most admired architectural gems. Your guide will lead you on a Lucca tour stopping outside some of the city's most revered churches and give you some background on the violent history of the region, before giving you free time to explore on your own. Hopping back in the car, your Pisa Day Trip from Florence will have you back in Florence by the evening, just in time to grab a shower and head out for dinner.",
+            ],
           },
         ],
       },
