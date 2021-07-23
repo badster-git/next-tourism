@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const CustomIcon = ({ query, onChange, onFocus }) => {
+const CustomSearchbar = ({ query, onChange, onFocus }) => {
   const classes = useStyles();
   return (
     <div className={classes.searchBox}>
@@ -104,7 +104,7 @@ const CustomIcon = ({ query, onChange, onFocus }) => {
         value={query}
         onChange={onChange}
         onFocus={onFocus}
-        placeholder="Search tours"
+        placeholder="Find tours"
         autoComplete="off"
         autoCorrect="off"
       />
@@ -160,11 +160,15 @@ export const CustomSearch = () => {
       }}
     >
       <div className={classes.container}>
-        <CustomIcon query={query} onChange={onChange} onFocus={onFocus} />
+        <CustomSearchbar query={query} onChange={onChange} onFocus={onFocus} />
         {active && results.length > 0 && (
           <ul className={classes.results}>
             {results.map(({ id, title, path }) => (
-              <li key={id} className={classes.result}>
+              <li
+                key={id}
+                className={classes.result}
+                onClick={() => setActive(false)}
+              >
                 <Link href="/[path]" as={`/${path}`}>
                   <Typography className={classes.resultText} variant="body2">
                     {title}
