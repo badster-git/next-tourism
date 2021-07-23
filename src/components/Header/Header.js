@@ -1,5 +1,7 @@
-import React, { useState, useRef } from "react";
-import { Typography, Container, Box } from "@material-ui/core";
+import { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { Typography, Container, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -54,7 +56,54 @@ const useStyles = makeStyles((theme) => ({
         "background .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out",
     },
   },
+  // CustomSearchbar
+  btnSearch: {
+    backgroundColor: "transparent",
+  },
 }));
+
+const validateSchema = yup.object({
+  search: yup
+    .string("Enter an item to search")
+});
+
+const CustomSearchbar = () => {
+  const classes = useStyles();
+  const formik = useFormik({
+    initialValues: {
+      search: "",
+    },
+    validationSchema: validateSchema,
+    onSubmit: async (values, actions) => {
+      console.log(values);
+    },
+  });
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+      }}
+    >
+      <form onSubmit={formik.handleSubmit} method="post">
+        <SearchIcon style={{ position: "absolute" }} className={classes.icon} />
+        <TextField
+          id="search"
+          type="text"
+          name="search"
+          label="Search"
+          variant="filled"
+          color="secondary"
+          value={formik.values.search}
+          onChange={formik.handleChange}
+          error={formik.touched.search && Boolean(formik.errors.search)}
+          helperText={formik.touched.search && formik.errors.search}
+        />
+      </form>
+    </div>
+  );
+};
 
 const Header = ({ children, ...rest }) => {
   const { links } = rest;
@@ -85,18 +134,7 @@ const Header = ({ children, ...rest }) => {
             <Image src={logo} alt="Logo of site" width={310} height={88} />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-          }}
-        >
-          <SearchIcon
-            style={{ position: "absolute" }}
-            className={classes.icon}
-          />
-        </div>
+        <CustomSearchbar />
       </Container>
       <Container disableGutters style={{ marginTop: "10px" }}>
         <div style={{ padding: "0 15px" }}>

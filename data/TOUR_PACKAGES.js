@@ -1,4 +1,4 @@
-export const TOUR_PACKAGES = [
+module.exports = [
   {
     id: 1,
     path: "new-york-tours",

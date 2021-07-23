@@ -1,4 +1,4 @@
-import { FormikContext, useFormik } from "formik";
+import { useFormik } from "formik";
 import { useState } from "react";
 import * as yup from "yup";
 import {
@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import { green } from "@material-ui/core/colors";
 import MuiAlert from "@material-ui/lab/Alert";
-import { makeStyles, useTheme } from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles";
 
 const validateSchema = yup.object({
   email: yup
@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const NewsletterForm = () => {
   const classes = useStyles();
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const formik = useFormik({
     initialValues: {
