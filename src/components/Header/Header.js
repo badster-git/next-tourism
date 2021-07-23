@@ -1,10 +1,9 @@
-import React, { useState, useRef } from "react";
-import { Typography, Container, Box } from "@material-ui/core";
+import { Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import SearchIcon from "@material-ui/icons/Search";
 import Link from "next/link";
+import { CustomSearch } from "../CustomSearch/CustomSearch";
 import withScroll from "../../../hoc/withScroll.hoc.js";
 import logo from "../../../public/logo/logo.png";
 
@@ -85,18 +84,7 @@ const Header = ({ children, ...rest }) => {
             <Image src={logo} alt="Logo of site" width={310} height={88} />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "flex-end",
-            alignItems: "center",
-          }}
-        >
-          <SearchIcon
-            style={{ position: "absolute" }}
-            className={classes.icon}
-          />
-        </div>
+        <CustomSearch />
       </Container>
       <Container disableGutters style={{ marginTop: "10px" }}>
         <div style={{ padding: "0 15px" }}>

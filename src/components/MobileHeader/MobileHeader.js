@@ -4,11 +4,11 @@ import { Container, useMediaQuery } from "@material-ui/core";
 import { useTheme } from "@material-ui/core/styles";
 import Image from "next/image";
 import Hamburger from "hamburger-react";
-import SearchIcon from "@material-ui/icons/Search";
 
 import withScroll from "../../../hoc/withScroll.hoc.js";
 import { CustomDialog } from "../CustomDialog/CustomDialog";
 import logo from "../../../public/logo/logo.png";
+import { CustomSearch } from "../CustomSearch/CustomSearch.js";
 
 const MobileHeader = ({ children, ...rest }) => {
   const { links } = rest;
@@ -40,7 +40,6 @@ const MobileHeader = ({ children, ...rest }) => {
         style={{
           display: "flex",
           padding: "0 15px",
-          flexWrap: matchesSM ? "wrap" : "nowrap",
           justifyContent: matchesSM ? "center" : "",
         }}
       >
@@ -55,7 +54,7 @@ const MobileHeader = ({ children, ...rest }) => {
           <Container
             style={{
               alignItems: "center",
-              justifyContent: matchesSM ?  "center" : "flex-start",
+              justifyContent: matchesSM ? "center" : "flex-start",
               display: "flex",
             }}
             disableGutters
@@ -76,15 +75,27 @@ const MobileHeader = ({ children, ...rest }) => {
               alignItems: "center",
             }}
           >
-            <SearchIcon className="icon" />
-            <Hamburger
-              toggled={isOpen}
-              toggle={setOpen}
-              direction="right"
-              hideOutline={true}
-              distance="sm"
-              size={22}
-            />
+            <CustomSearch />
+            <div
+              style={{
+                backgroundColor: theme.palette.common.lightBrown,
+                borderRadius: "50%",
+                width: "50px",
+                height: "50px",
+                marginLeft: "10px"
+              }}
+            >
+              <Hamburger
+                toggled={isOpen}
+                toggle={setOpen}
+                direction="right"
+                hideOutline={true}
+                distance="sm"
+                size={25}
+                color={theme.palette.common.white}
+                rounded
+              />
+            </div>
           </div>
         </div>
       </div>

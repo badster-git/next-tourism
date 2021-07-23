@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Layout } from "../../components/Layout/Layout";
-import { TOUR_PACKAGES } from "../../../data/TOUR_PACKAGES";
 import { TourProductInfo } from "../../components/TourProductInfo/TourProductInfo";
+const tourPackages = require("../../../data/TOUR_PACKAGES");
 
 const TourInformation = ({ tour }) => {
   const router = useRouter();
@@ -15,7 +15,7 @@ const TourInformation = ({ tour }) => {
 
 export async function getStaticPaths() {
   // Return a list of possible value for id
-  const paths = TOUR_PACKAGES.map((tour) => {
+  const paths = tourPackages.map((tour) => {
     let path = tour.path;
 
     let href = tour.data
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the tour post using params object
 
-  const tours = TOUR_PACKAGES.filter((item) => item.path === params.path);
+  const tours = tourPackages.filter((item) => item.path === params.path);
 
   let filteredTours = tours
     .map((tour) =>

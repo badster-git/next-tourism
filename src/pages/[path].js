@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router';
-import { TOUR_PACKAGES } from '../../data/TOUR_PACKAGES';
 import { Layout } from "../components/Layout/Layout";
 import { TourTop } from '../components/TourTop/TourTop';
 import { TourContainer } from '../components/TourContainer/TourContainer';
+const tourPackages = require("../../data/TOUR_PACKAGES");
 
 const Tour = ({ tour }) => {
   const router = useRouter()
@@ -16,7 +16,7 @@ const Tour = ({ tour }) => {
 
 export async function getStaticPaths() {
   // Return a list of possible value for id
-  const paths = TOUR_PACKAGES.map((tour) => ({
+  const paths = tourPackages.map((tour) => ({
     params: { path: tour.path },
   }));
 
@@ -28,7 +28,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // Fetch necessary data for the blog post using params.id
-  const tours = TOUR_PACKAGES.filter(
+
+  const tours = tourPackages.filter(
     (p) => p.path.toString() === params.path
   );
 
