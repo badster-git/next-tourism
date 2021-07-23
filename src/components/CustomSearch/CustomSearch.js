@@ -164,17 +164,13 @@ export const CustomSearch = () => {
         {active && results.length > 0 && (
           <ul className={classes.results}>
             {results.map(({ id, title, path }) => (
-              <li
-                key={id}
-                className={classes.result}
-                onClick={() => setActive(false)}
-              >
-                <Link href="/[path]" as={`/${path}`}>
+              <Link key={id} href="/[path]" as={`/${path}`}>
+                <li className={classes.result} onClick={() => setActive(false)}>
                   <Typography className={classes.resultText} variant="body2">
                     {title}
                   </Typography>
-                </Link>
-              </li>
+                </li>
+              </Link>
             ))}
           </ul>
         )}
