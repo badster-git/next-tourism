@@ -3,9 +3,11 @@ import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   sectionTitle: {
+    marginTop: "30px",
     marginBottom: "30px",
     paddingBottom: "30px",
     borderBottom: "1px solid #d9dde2",
+    textAlign: "center",
     [theme.breakpoints.up(640)]: {
       marginTop: "60px",
     },
@@ -46,7 +48,7 @@ export const TourInfoDescription = ({
       <Container maxWidth={false} disableGutters>
         {tourDescription.map((p) => (
           <Typography
-            key={p.id}
+            key={p}
             variant="body1"
             className={classes.sectionDescription}
             color="textSecondary"

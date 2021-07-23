@@ -10,13 +10,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
   },
   mainTourInfoContainer: {
-    marginTop: "180px",
+    marginTop: "120px",
     width: "88%",
     marginLeft: "auto",
     marginRight: "auto",
     position: "relative",
     [theme.breakpoints.up(1250)]: {
       maxWidth: "1280px",
+    },
+    [theme.breakpoints.up(640)]: {
+      marginTop: "180px",
+      lineHeight: "1.4",
     },
   },
 }));

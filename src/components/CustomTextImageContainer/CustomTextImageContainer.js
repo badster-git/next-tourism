@@ -65,7 +65,7 @@ export const CustomTextImageContainer = ({
           />
           {description.map((desc) => (
             <Typography
-              key={desc.id}
+              key={desc}
               component="p"
               variant="body2"
               style={{ marginBottom: "1rem" }}

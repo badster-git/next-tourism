@@ -12,7 +12,7 @@ export const TOP_ATTRACTIONS_DATA_EUROPE = [
   {
     id: 3,
     title: "St Mark's Basilica",
-    href: "/venice-tours/#tag-st-marks-basilica-doges-palace-tours",
+    href: "/venice-tours/#tag-st-marks-basilica-tours",
   },
   {
     id: 4,
@@ -22,7 +22,7 @@ export const TOP_ATTRACTIONS_DATA_EUROPE = [
   {
     id: 5,
     title: "Micahelangelo's David",
-    href: "/florence-tours/#tag-david-duomo-tours",
+    href: "/florence-tours/#tag-david-and-duomo-tours",
   },
   {
     id: 6,

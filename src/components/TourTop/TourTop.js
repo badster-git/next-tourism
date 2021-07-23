@@ -4,7 +4,11 @@ import { CustomTabMenu } from "../CustomTabMenu/CustomTabMenu";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    marginTop: "180px",
+    marginTop: "40px",
+    [theme.breakpoints.up(860)]: {
+      marginTop: "100px",
+      lineHeight: "1.4",
+    },
   },
   innerContainer: {
     width: "88%",
@@ -20,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     paddingTop: "60px",
     transition: "padding-top .2s ease",
+    [theme.breakpoints.down(860)]: {
+      justifyContent: "center",
+    },
   },
   cityTourTabs: {
     marginTop: "30px",
@@ -41,7 +48,11 @@ export const TourTop = ({ title, menu, ...rest }) => {
       <Container maxWidth={false} className={classes.cityToursHeader}>
         <Container maxWidth={false} className={classes.innerContainer}>
           <Container maxWidth={false} className={classes.tourTitle}>
-            <Typography variant="h4" component="h3">
+            <Typography
+              variant="h4"
+              component="h3"
+              className={classes.headerTitle}
+            >
               {title}
             </Typography>
           </Container>
