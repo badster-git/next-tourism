@@ -3,6 +3,8 @@ module.exports = [
     id: 1,
     path: "new-york-tours",
     title: "New York Tours",
+    subtitle:
+      "From the Statue of Liberty to the best of Broadway, stopping off for the perfect slice of pizza in between, our most in-demand tours of New York allow you to experience the very best of the city, no matter what your taste!",
     menu: [
       {
         id: "#tag-essential-new-york",
@@ -30,7 +32,6 @@ module.exports = [
         id: "tag-essential-new-york",
         category: "essential",
         title: "Essential New York",
-        icon: "nothing",
         subtitle:
           "From the Statue of Liberty to the best of Broadway, stopping off for the perfect slice of pizza in between, our most in-demand tours of New York allow you to experience the very best of the city, no matter what your taste!",
         tours: [
@@ -307,6 +308,8 @@ module.exports = [
     id: 2,
     path: "new-orleans-city-tours",
     title: "New Orleans Tours",
+    subtitle:
+      "There's no place like the Big Easy. From its hauntingly beautiful French Quarter, to the historic avenues in the Garden District, and all the eccentric characters in between. Getting to know New Orleans is a cinch with our local Orleanians at your side!",
     menu: [
       {
         id: "#tag-essential-new-orleans",
@@ -394,6 +397,8 @@ module.exports = [
     id: 3,
     path: "chicago-tours",
     title: "Chicago Tours",
+    subtitle:
+      "From the Statue of Liberty to the best of Broadway, stopping off for the perfect slice of pizza in between, our most in-demand tours of New York allow you to experience the very best of the city, no matter what your taste!",
     menu: [
       {
         id: "#tag-essential-chicago",
@@ -463,6 +468,8 @@ module.exports = [
     id: 4,
     path: "key-west-tours",
     title: "Key West Tours",
+    subtitle:
+      "Key West is a small island with an incredible amount of cultures - most prominent are the influences of Cuban and Caribbean traditions that soak it almost as much as the sun does. Any visit is only accentuated by an incredible experience with a local.",
     menu: [
       {
         id: "#tag-essential-key-west",
@@ -505,6 +512,7 @@ module.exports = [
     id: 5,
     path: "grand-canyon-tours",
     title: "Grand Canyon Tours",
+    subtitle: "",
     menu: [
       {
         id: "#tag-essential-grand-canyon",
@@ -527,6 +535,8 @@ module.exports = [
     id: 6,
     path: "san-francisco-tours",
     title: "San Francisco Tours",
+    subtitle:
+      "From Alcatraz to the Golden Gate Bridge, to the the Painted Ladies of Postcard Row, San Francisco is an eclectic mix of must-see neighborhoods. With pre-reserved tickets and special access, our tours get you right to the heart of this awe-inspiring city.",
     menu: [
       {
         id: "#tag-essential-san-francisco",
@@ -812,6 +822,8 @@ module.exports = [
     id: 7,
     path: "san-diego-tours",
     title: "San Diego Tours",
+    subtitle:
+      "San Diego is a medley of pristine sunshine, endless coastline, and California culture at its best. There are many ways to get in touch with the local sites - but a cruise on the open water is an essential way to greet this unforgettable city.",
     menu: [
       {
         id: "#tag-essential-san-diego",
@@ -890,6 +902,8 @@ module.exports = [
     id: 8,
     path: "charleston-tours",
     title: "Charleston Tours",
+    subtitle:
+      "Charleston, South Carolina is a city saturated by a former era with all its charm and charisma displayed on every one of its historical corners. Experience this all-enduring southern city through the warm greetings of its friendly locals.",
     menu: [
       {
         id: "#tag-essential-charleston",
@@ -953,6 +967,8 @@ module.exports = [
     id: 9,
     path: "denver-tours",
     title: "Denver Tours",
+    subtitle:
+      "Denver, Colorado is no longer a sleepy town nestled in the Rocky Mountains. Join one of our walking tours in this growing city often coined the 'fastest growing city in America'.",
     menu: [
       {
         id: "#tag-essential-denver",
@@ -1014,6 +1030,7 @@ module.exports = [
     id: 10,
     path: "boston-tours",
     title: "Boston Tours",
+    subtitle: "Boston is no longer a sleep town nestled on the East Coast.",
     menu: [
       {
         id: "#tag-essential-boston",
@@ -1058,6 +1075,8 @@ module.exports = [
     id: 11,
     path: "rome-tours",
     title: "Rome Tours",
+    subtitle:
+      "From Colosseum Tours to Rome Food tours, we have it all. Whether it’s a compact introduction or a full day trip, our Vatican tours provide special access to St. Peter’s Basilica, the Museums and the Sistine Chapel with early entry or skip-the-line tickets. All perfectly guided by our experienced Walks guides.",
     menu: [
       {
         id: "#tag-vatican-tours",
@@ -1506,6 +1525,8 @@ module.exports = [
     id: 12,
     path: "florence-tours",
     title: "Florence Tours",
+    subtitle:
+      "Our most in-demand Florence tours cover the best of the city - think pasta making, after-hours and skip-the-line tickets and the most delightful day trips to Tuscany.",
     menu: [
       {
         id: "#tag-essential-florence-tours",
@@ -1801,6 +1822,8 @@ module.exports = [
     id: 13,
     path: "venice-tours",
     title: "Venice Tours",
+    subtitle:
+      "From after-hours alone time in St. Mark’s Basilica to romantic gondola rides, our flagship tours of Venice include special access to some of the top attractions as well as the best things to do on a day sightseeing in the city.",
     menu: [
       {
         id: "#tag-essential-venice-tours",
@@ -2099,6 +2122,8 @@ module.exports = [
     id: 14,
     path: "paris-tours",
     title: "Paris Tours",
+    subtitle:
+      "Skip the line at the city's top sights and discover other amazing things to do in Paris - our flagship tours take your from the Eiffel Tower to Marie Antoinette’s prison cell, exploring every unique detail in between.",
     menu: [
       {
         id: "#tag-essential-paris-tours",
@@ -2515,6 +2540,8 @@ module.exports = [
     id: 15,
     path: "barcelona-tours",
     title: "Barcelona Tours",
+    subtitle:
+      "Our top Barcelona tours include the most important attractions of the city, with skip-the-line access, and the best day trips from Barcelona.",
     menu: [
       {
         id: "#tag-essential-barcelona-tours",
@@ -2611,6 +2638,8 @@ module.exports = [
     id: 16,
     path: "madrid-tours",
     title: "Madrid Tours",
+    subtitle:
+      "Take in the best of Madrid in a day with a walking tour including early access to the Royal Palace, fully guided tours of the world famous Prado Art Museum and illuminating, local-led city strolls.",
     menu: [
       {
         id: "#tag-essential-madrid-tours",
@@ -2727,6 +2756,8 @@ module.exports = [
     id: 17,
     path: "palma-tours",
     title: "Palma Tours",
+    subtitle:
+      "Palma de Mallorca, known simply as 'Palma' is a meld of all the things we love about Spain. The city offers sun streaked days exploring its history, and nights enjoying the local culture.",
     menu: [
       {
         id: "#tag-essential-palma-tours",
@@ -2794,6 +2825,8 @@ module.exports = [
     id: 18,
     path: "london-tours",
     title: "London Tours",
+    subtitle:
+      "Our London tours offer skip-the-line tickets to some of the city's top sights. With full-day sightseeing packages, and special access to the Houses of Parliament or the British Museum, you won’t be stuck for great things to do around the city!",
     menu: [
       {
         id: "#tag-essential-london-tours",
@@ -3035,6 +3068,8 @@ module.exports = [
     id: 19,
     path: "athens-tours",
     title: "Athens Tours",
+    subtitle:
+      "See the top attractions in Athens with a fully guided skip-the-line tickets tour of the Acropolis and Parthenon, or take in the best of the city in a day with a perfectly curated highlights tour.",
     menu: [
       {
         id: "#tag-essential-athens-tours",
@@ -3144,6 +3179,8 @@ module.exports = [
     id: 20,
     path: "crete-tours",
     title: "Crete Tours",
+    subtitle:
+      "Knossos is Crete's premier archaeological site, steeped in illuminating Greek heritage. Explore the past, consider the present in the company of an expert archaeologist guide.",
     menu: [
       {
         id: "#tag-essential-crete-tours",
@@ -3207,6 +3244,7 @@ module.exports = [
     id: 21,
     path: "rhodes-tours",
     title: "Rhodes Tours",
+    subtitle: "Rhodes is a beautiful location in Greece",
     menu: [
       {
         id: "#tag-essential-rhodes-tours",
@@ -3318,6 +3356,7 @@ module.exports = [
     id: 22,
     path: "lisbon-tours",
     title: "Lisbon Tours",
+    subtitle: "Lisbon is a beautiful location in Greece",
     menu: [
       {
         id: "#tag-essential-lisbon-tours",
